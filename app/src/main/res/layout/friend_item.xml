@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/profile_image"
+        android:drawingCacheQuality="high"
+        android:src="@drawable/default_image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:id="@+id/username"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_toEndOf="@+id/profile_image"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:textColor="#000"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/img_online"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/bg_online"
+        android:visibility="gone"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_toEndOf="@+id/profile_image"/>
+
+    <ImageView
+        android:id="@+id/img_offline"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/bg_offline"
+        android:visibility="gone"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_toEndOf="@+id/profile_image"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp"
+        android:id="@+id/last_msg"
+        android:textColor="#bfbfbf"
+        android:layout_marginLeft="60dp"
+        android:maxLines="1"/>
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/FL_unread"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_online">
+        <TextView
+            android:id="@+id/num_unread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_gravity="center"
+            android:textColor="#fff"/>
+    </FrameLayout>
+
+
+</RelativeLayout>
